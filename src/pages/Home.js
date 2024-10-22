@@ -44,6 +44,9 @@ const Home = () => {
 
         setTotalusers(userdata.totaluser);
         setNewUsers(userdata.newuserthisMonth);
+        setleaveIn(userdata.leaveIn);
+        setleaveOut(userdata.leaveOut);
+        setleave(userdata.totalLeaveCount);
 
         if (Array.isArray(userdata.userperMonth)) {
           setuserPerMonth(userdata.userperMonth);

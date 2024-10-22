@@ -144,6 +144,9 @@ const Login = () => {
         </form>
         <h1 className="text-red-400 ">{erroMessage !== "" && erroMessage}</h1>
       </div>
+      {erroMessage && (
+        <div className="text-red-400 text-center">{erroMessage}</div>
+      )}
     </div>
   );
 };

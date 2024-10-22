@@ -749,6 +749,10 @@ const Application = () => {
           </div>
         </div>
       </div>
+
+      {erroMessage && (
+        <div className="text-red-400 text-center">{erroMessage}</div>
+      )}
     </div>
   );
 };

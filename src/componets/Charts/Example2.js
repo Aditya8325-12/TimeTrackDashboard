@@ -28,8 +28,7 @@ const Example2 = ({ leaveIn, leaveOut, leave, Totalusers }) => {
     labels: ["Total User", "Leave In ", "Leave Out", "Leave"],
   };
 
-  // const series = [Totalusers, leaveIn, leaveOut, leave];
-  const series = [44, 55, 67, 83];
+  const series = [Totalusers, leaveIn, leaveOut, leave];
 
   return (
     <div id="chart" className=" w-11/12">
