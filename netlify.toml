@@ -1,0 +1,4 @@
+[build]
+  command = "yarn build"
+  publish = "build"  # or "dist" based on your project setup
+  node_version = "20.15.1"
