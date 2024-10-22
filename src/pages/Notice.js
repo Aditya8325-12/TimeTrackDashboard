@@ -60,7 +60,7 @@ const Notice = () => {
   const AddData = async () => {
     try {
       setLoading(true);
-      if (!title == "" && message !== "") {
+      if (title !== "" && message !== "") {
         const token = Cookies.get("token");
         if (!token) {
           navigate("/login");
