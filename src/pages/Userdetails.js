@@ -16,68 +16,71 @@ const Userdetails = () => {
   const [erroMessage, setErroMessage] = useState("");
   const [Attandance, setAttandance] = useState({});
 
-  const fetchData = async () => {
-    setLoading(true);
-    const token = Cookies.get("token");
-
-    if (!token) {
-      setErroMessage("No token found, please login.");
-      navigate("/login");
-      return;
-    }
-
-    try {
-      const body = {
-        student_id: location.state._id,
-      };
-      const url = `${process.env.REACT_APP_BASE_URL}/admin/userdetails`;
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(body),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        setErroMessage(errorData.message || "Unauthorized access");
-        navigate("/login");
-      } else {
-        const userdata = await response.json();
-        setUserData(userdata.userdata);
-
-        const attandance = userdata.attandance.reduce((initialValue, item) => {
-          if (item.Status !== "--") {
-            if (initialValue[item.Status]) {
-              initialValue[item.Status] += 1;
-            } else {
-              initialValue[item.Status] = 1;
-            }
-          }
-
-          return initialValue;
-        }, {});
-
-        setAttandance(attandance);
-
-        if (Array.isArray(userdata.timedata)) {
-          const calendarData = transformAttendanceData(userdata.timedata);
-          setCalendarData(calendarData);
-        } else {
-          setErroMessage("Unexpected data format.");
-        }
-      }
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      setErroMessage("An error occurred while fetching data.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      const token = Cookies.get("token");
+
+      if (!token) {
+        setErroMessage("No token found, please login.");
+        navigate("/login");
+        return;
+      }
+
+      try {
+        const body = {
+          student_id: location.state._id,
+        };
+        const url = `${process.env.REACT_APP_BASE_URL}/admin/userdetails`;
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(body),
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          setErroMessage(errorData.message || "Unauthorized access");
+          navigate("/login");
+        } else {
+          const userdata = await response.json();
+          setUserData(userdata.userdata);
+
+          const attandance = userdata.attandance.reduce(
+            (initialValue, item) => {
+              if (item.Status !== "--") {
+                if (initialValue[item.Status]) {
+                  initialValue[item.Status] += 1;
+                } else {
+                  initialValue[item.Status] = 1;
+                }
+              }
+
+              return initialValue;
+            },
+            {}
+          );
+
+          setAttandance(attandance);
+
+          if (Array.isArray(userdata.timedata)) {
+            const calendarData = transformAttendanceData(userdata.timedata);
+            setCalendarData(calendarData);
+          } else {
+            setErroMessage("Unexpected data format.");
+          }
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setErroMessage("An error occurred while fetching data.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchData();
   }, []);
 

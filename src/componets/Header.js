@@ -74,15 +74,6 @@ const Header = () => {
             tabIndex="-1"
           >
             <div className="py-1 flex flex-col  w-full items-end" role="none">
-              {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
-              <a
-                className="block px-4 py-2 text-sm text-gray-700"
-                role="menuitem"
-                tabIndex="-1"
-                id="menu-item-0"
-              >
-                Account settings
-              </a>
               <button
                 type="submit"
                 className="block w-full px-4 py-2 text-end text-sm text-gray-700 hover:text-blue-400  "
