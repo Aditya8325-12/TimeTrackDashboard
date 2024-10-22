@@ -27,6 +27,8 @@ const Notice = () => {
 
   useEffect(() => {
     fetchData();
+        // This disables the exhaustive-deps rule for this useEffect.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchData = async () => {

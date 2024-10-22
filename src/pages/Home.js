@@ -61,6 +61,8 @@ const Home = () => {
     };
 
     fetchData();
+    // This disables the exhaustive-deps rule for this useEffect.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (Loading) {

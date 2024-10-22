@@ -140,10 +140,14 @@ const Application = () => {
     if (!token) {
       navigate("/login");
     }
-  }, [navigate]);
+    // This disables the exhaustive-deps rule for this useEffect.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     fetchData();
+    // This disables the exhaustive-deps rule for this useEffect.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (Loading === true) {

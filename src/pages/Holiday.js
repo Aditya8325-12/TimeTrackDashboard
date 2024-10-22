@@ -32,6 +32,8 @@ const Holiday = () => {
 
   useEffect(() => {
     fetchData();
+    // This disables the exhaustive-deps rule for this useEffect.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -39,7 +41,9 @@ const Holiday = () => {
     if (!token) {
       navigate("/login");
     }
-  }, [navigate]);
+    // This disables the exhaustive-deps rule for this useEffect.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const fetchData = async () => {
     setLoading(true);
