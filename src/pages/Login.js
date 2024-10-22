@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
@@ -119,12 +118,6 @@ const Login = () => {
                 Remember this device
               </label>
             </div>
-            <a
-              
-              className="ms-auto text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
-            >
-              Lost Password?
-            </a>
           </div>
           <button
             type="submit"
@@ -132,15 +125,6 @@ const Login = () => {
           >
             Login to your account
           </button>
-          <div className="text-sm font-medium text-gray-900 dark:text-white">
-            Not registered yet?{" "}
-            <Link
-              to={"/signup"}
-              className="text-blue-600 hover:underline cursor-pointer dark:text-blue-500"
-            >
-              Create account
-            </Link>
-          </div>
         </form>
         <h1 className="text-red-400 ">{erroMessage !== "" && erroMessage}</h1>
       </div>

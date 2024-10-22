@@ -82,7 +82,7 @@ const Userdetails = () => {
     };
 
     fetchData();
-  }, []);
+  }, [navigate]);
 
   if (Loading === true) {
     return <Loader />;

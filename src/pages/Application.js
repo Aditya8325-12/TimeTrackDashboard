@@ -30,18 +30,6 @@ const Application = () => {
   const [fillterOption, setfillterOption] = useState(false);
   // pagination
   const [currentpageIndex, setcurrentpageIndex] = useState(0);
-
-  useEffect(() => {
-    const token = Cookies.get("token");
-    if (!token) {
-      navigate("/login");
-    }
-  }, []);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
   const fetchData = async () => {
     setLoading(true);
     const token = Cookies.get("token");
@@ -147,6 +135,17 @@ const Application = () => {
     }
   };
 
+  useEffect(() => {
+    const token = Cookies.get("token");
+    if (!token) {
+      navigate("/login");
+    }
+  }, [navigate]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   if (Loading === true) {
     return <Loader />;
   }
@@ -236,54 +235,54 @@ const Application = () => {
               tabIndex={-1}
             >
               <div className="py-1" role="none">
-                <a
+                <button
                   onClick={() => {
                     setfillterOption(false);
                     fetchData();
                   }}
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
-                  tabIndex={-1}
+                  tabIndex={0} // Make it keyboard accessible
                   id="menu-item-0"
                 >
                   All
-                </a>
-                <a
+                </button>
+                <button
                   onClick={() => {
                     setfillterOption(false);
                     setUserData(PendingData);
                   }}
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
-                  tabIndex={-1}
-                  id="menu-item-0"
+                  tabIndex={0} // Make it keyboard accessible
+                  id="menu-item-1"
                 >
                   Pending
-                </a>
-                <a
+                </button>
+                <button
                   onClick={() => {
                     setUserData(RejectedData);
                     setfillterOption(false);
                   }}
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
-                  tabIndex={-1}
-                  id="menu-item-1"
+                  tabIndex={0} // Make it keyboard accessible
+                  id="menu-item-2"
                 >
-                  Reejected
-                </a>
-                <a
+                  Rejected
+                </button>
+                <button
                   onClick={() => {
                     setfillterOption(false);
                     setUserData(aproveData);
                   }}
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
-                  tabIndex={-1}
-                  id="menu-item-1"
+                  tabIndex={0} // Make it keyboard accessible
+                  id="menu-item-3"
                 >
-                  Aprove
-                </a>
+                  Approve
+                </button>
               </div>
             </div>
           </div>
@@ -333,10 +332,7 @@ const Application = () => {
                         {items.student_id}
                       </div>
                     </td>
-                    <td
-                      scope="row"
-                      className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                    >
+                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                       <div className="flex items-center mr-3">
                         {items.leavecode}
                       </div>
@@ -393,15 +389,15 @@ const Application = () => {
         aria-label="Table navigation"
       >
         <ul className=" items-stretch gap-4 flex  -space-x-px">
-          {currentpageIndex > 6 && (
+          {currentpageIndex >= 6 && (
             <li>
-              <a
+              <button
                 onClick={() => {
                   setcurrentpageIndex(currentpageIndex - 6);
                 }}
                 className="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                aria-label="Previous" // For screen readers
               >
-                <span className="sr-only">Previous</span>
                 <svg
                   className="w-5 h-5"
                   aria-hidden="true"
@@ -416,17 +412,18 @@ const Application = () => {
                   />
                 </svg>
                 <p>Previous</p>
-              </a>
+              </button>
             </li>
           )}
 
           {currentpageIndex + 6 < UserData.length && (
             <li>
-              <a
+              <button
                 onClick={() => {
                   setcurrentpageIndex(currentpageIndex + 6);
                 }}
                 className="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                aria-label="Next" // For screen readers
               >
                 <p>Next</p>
                 <span className="sr-only">Next</span>
@@ -443,7 +440,7 @@ const Application = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-              </a>
+              </button>
             </li>
           )}
         </ul>

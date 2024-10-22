@@ -14,7 +14,7 @@ const Home = () => {
     if (!token) {
       navigate("/login");
     }
-  }, []);
+  }, [navigate]);
 
   const [Totalusers, setTotalusers] = useState(null);
   const [NewUsers, setNewUsers] = useState(null);

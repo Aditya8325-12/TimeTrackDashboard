@@ -58,7 +58,7 @@ const Notice = () => {
   const AddData = async () => {
     try {
       setLoading(true);
-      if (title !== "" && message !== "") {
+      if (!title == "" && message !== "") {
         const token = Cookies.get("token");
         if (!token) {
           navigate("/login");
@@ -256,14 +256,13 @@ const Notice = () => {
         <ul className=" items-stretch gap-4 flex  -space-x-px">
           {currentpageIndex >= 6 && (
             <li>
-              <a
-                
+              <button
                 onClick={() => {
                   setcurrentpageIndex(currentpageIndex - 6);
                 }}
                 className="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                aria-label="Previous" // For screen readers
               >
-                <span className="sr-only">Previous</span>
                 <svg
                   className="w-5 h-5"
                   aria-hidden="true"
@@ -278,18 +277,18 @@ const Notice = () => {
                   />
                 </svg>
                 <p>Previous</p>
-              </a>
+              </button>
             </li>
           )}
 
           {currentpageIndex + 6 < NoticeData.length && (
             <li>
-              <a
+              <button
                 onClick={() => {
                   setcurrentpageIndex(currentpageIndex + 6);
                 }}
-                
                 className="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                aria-label="Next" // For screen readers
               >
                 <p>Next</p>
                 <span className="sr-only">Next</span>
@@ -306,7 +305,7 @@ const Notice = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-              </a>
+              </button>
             </li>
           )}
         </ul>
