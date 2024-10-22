@@ -4,7 +4,6 @@ import Cookies from "js-cookie";
 
 const Header = () => {
   const [profile, setprofile] = useState(false);
-  const [LoginStatus, setLoginStatus] = useState(true);
   const navigate = useNavigate();
 
   const signOut = () => {
@@ -50,29 +49,20 @@ const Header = () => {
           className="hidden w-full md:flex md:w-auto items-center justify-center gap-5 relative"
           id="navbar-default"
         >
-          {LoginStatus ? (
-            <div className="relative  flex items-center gap-x-4 ">
-              <div className="text-end">
-                <h1 className="text-sm">Aditya Dhutraj</h1>
-                <p className="text-xs"> admin</p>
-              </div>
-              <img
-                onClick={() => {
-                  setprofile(!profile);
-                }}
-                src="https://images.unsplash.com/photo-1520262494112-9fe481d36ec3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyZWV8ZW58MHx8MHx8fDA%3D"
-                alt=""
-                className="h-10 w-10 rounded-full  cursor-pointer focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 "
-              />
+          <div className="relative  flex items-center gap-x-4 ">
+            <div className="text-end">
+              <h1 className="text-sm">Aditya Dhutraj</h1>
+              <p className="text-xs"> admin</p>
             </div>
-          ) : (
-            <button
-              type="submit"
-              className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Sign in
-            </button>
-          )}
+            <img
+              onClick={() => {
+                setprofile(!profile);
+              }}
+              src="https://images.unsplash.com/photo-1520262494112-9fe481d36ec3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyZWV8ZW58MHx8MHx8fDA%3D"
+              alt=""
+              className="h-10 w-10 rounded-full  cursor-pointer focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 "
+            />
+          </div>
 
           <div
             className={`absolute right-0 z-10 w-44 mt-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ${

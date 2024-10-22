@@ -81,9 +81,7 @@ const User = () => {
           const errorData = await response.json();
           console.log(errorData.message);
         }
-        const userdata = await response.json();
-        setsuccessMessege(userdata.message);
-        setsuccessModel(true);
+
         await fetchData();
       } else {
         seterroMessage("holiday id not found ");
