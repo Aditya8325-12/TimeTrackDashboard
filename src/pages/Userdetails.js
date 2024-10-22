@@ -16,10 +16,6 @@ const Userdetails = () => {
   const [erroMessage, setErroMessage] = useState("");
   const [Attandance, setAttandance] = useState({});
 
-  useEffect(() => {
-    fetchData();
-  }, [fetchData]);
-
   const fetchData = async () => {
     setLoading(true);
     const token = Cookies.get("token");
@@ -80,6 +76,10 @@ const Userdetails = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   if (Loading === true) {
     return <Loader />;
