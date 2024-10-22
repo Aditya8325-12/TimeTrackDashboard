@@ -76,7 +76,6 @@ const Header = () => {
             <div className="py-1 flex flex-col  w-full items-end" role="none">
               {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
               <a
-                href="#"
                 className="block px-4 py-2 text-sm text-gray-700"
                 role="menuitem"
                 tabIndex="-1"

@@ -79,7 +79,7 @@ const Userdetails = () => {
 
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+  }, []);
 
   if (Loading === true) {
     return <Loader />;

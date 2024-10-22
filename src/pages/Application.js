@@ -241,7 +241,6 @@ const Application = () => {
                     setfillterOption(false);
                     fetchData();
                   }}
-                  href="#"
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
                   tabIndex={-1}
@@ -254,7 +253,6 @@ const Application = () => {
                     setfillterOption(false);
                     setUserData(PendingData);
                   }}
-                  href="#"
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
                   tabIndex={-1}
@@ -267,7 +265,6 @@ const Application = () => {
                     setUserData(RejectedData);
                     setfillterOption(false);
                   }}
-                  href="#"
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
                   tabIndex={-1}
@@ -280,7 +277,6 @@ const Application = () => {
                     setfillterOption(false);
                     setUserData(aproveData);
                   }}
-                  href="#"
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
                   tabIndex={-1}
@@ -400,7 +396,6 @@ const Application = () => {
           {currentpageIndex > 6 && (
             <li>
               <a
-                href="#"
                 onClick={() => {
                   setcurrentpageIndex(currentpageIndex - 6);
                 }}
@@ -431,7 +426,6 @@ const Application = () => {
                 onClick={() => {
                   setcurrentpageIndex(currentpageIndex + 6);
                 }}
-                href="#"
                 className="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
               >
                 <p>Next</p>

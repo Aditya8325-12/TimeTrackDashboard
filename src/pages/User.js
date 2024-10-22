@@ -12,8 +12,6 @@ const User = () => {
   const [UserData, setUserData] = useState([]);
   const [Userid, setUserid] = useState(null);
 
-  const [successModel, setsuccessModel] = useState(false);
-  const [successMessege, setsuccessMessege] = useState("");
   const [erroMessage, seterroMessage] = useState("");
 
   const [deleteView, setdeleteView] = useState(false);
@@ -333,10 +331,9 @@ const User = () => {
           {currentpageIndex >= 6 && (
             <li>
               <a
-                href="#"
-                // onClick={() => {
-                //   setcurrentpageIndex(currentpageIndex - 6);
-                // }}
+                onClick={() => {
+                  setcurrentpageIndex(currentpageIndex - 6);
+                }}
                 className="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
               >
                 <span className="sr-only">Previous</span>
@@ -358,13 +355,13 @@ const User = () => {
             </li>
           )}
 
-          {currentpageIndex + 6 <= UserData.length && (
+          {currentpageIndex + 6 < UserData.length && (
             <li>
               <a
-                // onClick={() => {
-                //   setcurrentpageIndex(currentpageIndex + 6);
-                // }}
-                href="#"
+                onClick={() => {
+                  setcurrentpageIndex(currentpageIndex + 6);
+                }}
+
                 className="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
               >
                 <p>Next</p>
