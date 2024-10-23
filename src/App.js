@@ -20,9 +20,7 @@ const App = () => {
       <main class="grid min-h-full h-screen place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8  lg:hidden ">
         <div class="text-center">
           <p class="text-base font-semibold text-indigo-600">404</p>
-          <p class="mt-6 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-            This site is only accessible on desktop devices.
-          </p>
+
           <p class="mt-6 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
             This site is only available on desktop devices. Please switch to a
             desktop to view the content.
