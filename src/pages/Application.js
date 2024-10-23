@@ -155,7 +155,7 @@ const Application = () => {
   }
 
   return (
-    <div className="  w-full relative  flex  px-6 pt-6 flex-col ">
+    <div className="  w-full relative overflow-y-scroll  flex  px-6 pt-6 flex-col ">
       <div className="flex flex-col   md:flex-row md:items-center md:justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
         <div className="flex-1 flex items-center space-x-2 ">
           <h5>
@@ -398,9 +398,9 @@ const Application = () => {
                 Applay Date
               </th>
 
-              <th scope="col" className="p-4">
+              {/* <th scope="col" className="p-4 ">
                 Reason
-              </th>
+              </th> */}
               <th scope="col" className="p-4">
                 Status
               </th>
@@ -435,9 +435,9 @@ const Application = () => {
                         {convertdateToNameDatetring(items.applayDate)}
                       </span>
                     </td>
-                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap  ">
+                    {/* <td className="px-4 py-3 font-medium text-gray-900  whitespace-nowrap   ">
                       {items.reason}
-                    </td>
+                    </td> */}
                     <td
                       className={`px-4 py-3 font-medium  whitespace-nowrap   text-gray-900  ${
                         items.sanctionedStatus === "Approve"
