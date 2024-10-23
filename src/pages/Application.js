@@ -166,8 +166,8 @@ const Application = () => {
             1 - {parseInt(UserData.length / 6) + 1}
           </h5>
         </div>
-        <div className="flex-shrink-0 flex relative flex-col items-start md:flex-row md:items-center lg:justify-end space-y-3 md:space-y-0 md:space-x-3">
-          <div>
+        <div className="flex-shrink-0 flex  flex-col items-start md:flex-row md:items-center lg:justify-end space-y-3 md:space-y-0 md:space-x-3">
+          <div className="relative">
             <button
               type="button"
               onClick={() => {
@@ -193,66 +193,65 @@ const Application = () => {
               </svg>
               Filter options
             </button>
-          </div>
-
-          <div
-            className={` ${
-              fillterOption === true ? "absolute" : "hidden"
-            }  right-0 z-10 mt-2 w-36 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none `}
-            role="menu"
-            aria-orientation="vertical"
-            aria-labelledby="menu-button"
-            tabIndex={-1}
-          >
-            <div className="py-1" role="none">
-              <button
-                onClick={() => {
-                  setfillterOption(false);
-                  fetchData();
-                }}
-                className="block px-4 py-2 text-sm text-gray-700"
-                role="menuitem"
-                tabIndex={0} // Make it keyboard accessible
-                id="menu-item-0"
-              >
-                All
-              </button>
-              <button
-                onClick={() => {
-                  setfillterOption(false);
-                  setUserData(PendingData);
-                }}
-                className="block px-4 py-2 text-sm text-gray-700"
-                role="menuitem"
-                tabIndex={0} // Make it keyboard accessible
-                id="menu-item-1"
-              >
-                Pending
-              </button>
-              <button
-                onClick={() => {
-                  setUserData(RejectedData);
-                  setfillterOption(false);
-                }}
-                className="block px-4 py-2 text-sm text-gray-700"
-                role="menuitem"
-                tabIndex={0} // Make it keyboard accessible
-                id="menu-item-2"
-              >
-                Rejected
-              </button>
-              <button
-                onClick={() => {
-                  setfillterOption(false);
-                  setUserData(aproveData);
-                }}
-                className="block px-4 py-2 text-sm text-gray-700"
-                role="menuitem"
-                tabIndex={0} // Make it keyboard accessible
-                id="menu-item-3"
-              >
-                Approve
-              </button>
+            <div
+              className={` ${
+                fillterOption === true ? "absolute" : "hidden"
+              }  right-0 z-10 mt-2 w-36 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none `}
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="menu-button"
+              tabIndex={-1}
+            >
+              <div className="py-1" role="none">
+                <button
+                  onClick={() => {
+                    setfillterOption(false);
+                    fetchData();
+                  }}
+                  className="block px-4 py-2 text-sm text-gray-700"
+                  role="menuitem"
+                  tabIndex={0} // Make it keyboard accessible
+                  id="menu-item-0"
+                >
+                  All
+                </button>
+                <button
+                  onClick={() => {
+                    setfillterOption(false);
+                    setUserData(PendingData);
+                  }}
+                  className="block px-4 py-2 text-sm text-gray-700"
+                  role="menuitem"
+                  tabIndex={0} // Make it keyboard accessible
+                  id="menu-item-1"
+                >
+                  Pending
+                </button>
+                <button
+                  onClick={() => {
+                    setUserData(RejectedData);
+                    setfillterOption(false);
+                  }}
+                  className="block px-4 py-2 text-sm text-gray-700"
+                  role="menuitem"
+                  tabIndex={0} // Make it keyboard accessible
+                  id="menu-item-2"
+                >
+                  Rejected
+                </button>
+                <button
+                  onClick={() => {
+                    setfillterOption(false);
+                    setUserData(aproveData);
+                  }}
+                  className="block px-4 py-2 text-sm text-gray-700"
+                  role="menuitem"
+                  tabIndex={0} // Make it keyboard accessible
+                  id="menu-item-3"
+                >
+                  Approve
+                </button>
+              </div>
             </div>
           </div>
         </div>
