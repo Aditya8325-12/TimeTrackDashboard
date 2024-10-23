@@ -146,7 +146,7 @@ const Notice = () => {
       <div className="flex flex-col   md:flex-row md:items-center md:justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
         <div className="flex-1 flex items-center space-x-2 ">
           <h5>
-            <span className="text-gray-500">All Holiday : </span>
+            <span className="text-gray-500">All Notice : </span>
             <span className="">{NoticeData.length}</span>
           </h5>
           <h5 className="text-gray-500  ml-1">

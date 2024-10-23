@@ -166,8 +166,98 @@ const Application = () => {
             1 - {parseInt(UserData.length / 6) + 1}
           </h5>
         </div>
+        <div className="flex-shrink-0 flex relative flex-col items-start md:flex-row md:items-center lg:justify-end space-y-3 md:space-y-0 md:space-x-3">
+          <div>
+            <button
+              type="button"
+              onClick={() => {
+                setfillterOption(!fillterOption);
+              }}
+              className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+              id="menu-button"
+              aria-expanded="true"
+              aria-haspopup="true"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                className="h-4 w-4 mr-1.5 -ml-1 text-gray-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              Filter options
+            </button>
+          </div>
+
+          <div
+            className={` ${
+              fillterOption === true ? "absolute" : "hidden"
+            }  right-0 z-10 mt-2 w-36 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none `}
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+            tabIndex={-1}
+          >
+            <div className="py-1" role="none">
+              <button
+                onClick={() => {
+                  setfillterOption(false);
+                  fetchData();
+                }}
+                className="block px-4 py-2 text-sm text-gray-700"
+                role="menuitem"
+                tabIndex={0} // Make it keyboard accessible
+                id="menu-item-0"
+              >
+                All
+              </button>
+              <button
+                onClick={() => {
+                  setfillterOption(false);
+                  setUserData(PendingData);
+                }}
+                className="block px-4 py-2 text-sm text-gray-700"
+                role="menuitem"
+                tabIndex={0} // Make it keyboard accessible
+                id="menu-item-1"
+              >
+                Pending
+              </button>
+              <button
+                onClick={() => {
+                  setUserData(RejectedData);
+                  setfillterOption(false);
+                }}
+                className="block px-4 py-2 text-sm text-gray-700"
+                role="menuitem"
+                tabIndex={0} // Make it keyboard accessible
+                id="menu-item-2"
+              >
+                Rejected
+              </button>
+              <button
+                onClick={() => {
+                  setfillterOption(false);
+                  setUserData(aproveData);
+                }}
+                className="block px-4 py-2 text-sm text-gray-700"
+                role="menuitem"
+                tabIndex={0} // Make it keyboard accessible
+                id="menu-item-3"
+              >
+                Approve
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col md:flex-row items-stretch md:items-center md:space-x-3 space-y-3 md:space-y-0 justify-between mx-4 py-4 border-t  ">
+      {/* <div className="flex flex-col md:flex-row items-stretch md:items-center md:space-x-3 space-y-3 md:space-y-0 justify-between mx-4 py-4 border-t  ">
         <div className="w-full md:w-1/2">
           <form className="flex items-center">
             <label htmlFor="simple-search" className="sr-only">
@@ -291,7 +381,7 @@ const Application = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="overflow-x-auto  ">
         <table className="w-full text-sm text-left  text-gray-500  ">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50    ">
