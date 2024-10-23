@@ -27,7 +27,7 @@ const Notice = () => {
 
   useEffect(() => {
     fetchData();
-        // This disables the exhaustive-deps rule for this useEffect.
+    // This disables the exhaustive-deps rule for this useEffect.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -147,9 +147,9 @@ const Notice = () => {
         <div className="flex-1 flex items-center space-x-2 ">
           <h5>
             <span className="text-gray-500">All Holiday : </span>
-            <span className="dark:text-white">{NoticeData.length}</span>
+            <span className="">{NoticeData.length}</span>
           </h5>
-          <h5 className="text-gray-500 dark:text-gray-400 ml-1">
+          <h5 className="text-gray-500  ml-1">
             1 - {parseInt(NoticeData.length / 6) + 1}
           </h5>
         </div>
@@ -159,7 +159,7 @@ const Notice = () => {
               setaddModule(true);
             }}
             type="button"
-            className="flex-shrink-0 inline-flex gap-2 items-center justify-center py-2 px-3 text-xs font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            className="flex-shrink-0 inline-flex gap-2 items-center justify-center py-2 px-3 text-xs font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200      "
           >
             <FaPlus />
             Add Notice
@@ -168,8 +168,8 @@ const Notice = () => {
       </div>
 
       <div className="overflow-x-auto  ">
-        <table className="w-full text-sm text-left  text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <table className="w-full text-sm text-left  text-gray-500 ">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50  ">
             <tr>
               <th scope="col" className="p-4">
                 <div className="flex items-center">Sr.No</div>
@@ -190,31 +190,28 @@ const Notice = () => {
             {NoticeData.slice(currentpageIndex, currentpageIndex + 6).map(
               (items, index) => {
                 return (
-                  <tr
-                    key={items._id}
-                    className="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
+                  <tr key={items._id} className="border-b  hover:bg-gray-100 ">
                     <td className="p-4 w-4">
                       <div className="flex items-center">{index + 1}</div>
                     </td>
                     <th
                       scope="row"
-                      className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap "
                     >
                       <div className="flex items-center mr-3">
                         {items.title}
                       </div>
                     </th>
                     <td className="px-4 py-3">
-                      <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                      <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded ">
                         {items.message}
                       </span>
                     </td>
-                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">
                       {convertdateToNameDatetring(items.date)}
                     </td>
 
-                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">
                       <div className="flex items-center space-x-4">
                         <button
                           type="button"
@@ -224,7 +221,7 @@ const Notice = () => {
                             setdeleteView(true);
                             setUserid(items._id);
                           }}
-                          className="flex items-center text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
+                          className="flex items-center text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center     "
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -262,7 +259,7 @@ const Notice = () => {
                 onClick={() => {
                   setcurrentpageIndex(currentpageIndex - 6);
                 }}
-                className="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                className="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700     "
                 aria-label="Previous" // For screen readers
               >
                 <svg
@@ -289,7 +286,7 @@ const Notice = () => {
                 onClick={() => {
                   setcurrentpageIndex(currentpageIndex + 6);
                 }}
-                className="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                className="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700     "
                 aria-label="Next" // For screen readers
               >
                 <p>Next</p>
@@ -325,13 +322,13 @@ const Notice = () => {
           } `}
         >
           <div className="relative w-full h-auto ">
-            <div className="relative bg-white  rounded-lg shadow-2xl dark:bg-gray-700">
+            <div className="relative bg-white  rounded-lg shadow-2xl ">
               <button
                 onClick={() => {
                   setaddModule(false);
                 }}
                 type="button"
-                className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center  "
                 data-modal-toggle="delete-modal"
               >
                 <svg
@@ -384,7 +381,7 @@ const Notice = () => {
                     onClick={() => {
                       AddData();
                     }}
-                    className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+                    className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300  font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
                   >
                     Add Notice
                   </button>
@@ -394,7 +391,7 @@ const Notice = () => {
                     }}
                     data-modal-toggle="delete-modal"
                     type="button"
-                    className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                    className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10      "
                   >
                     No, cancel
                   </button>
@@ -411,13 +408,13 @@ const Notice = () => {
           } `}
         >
           <div className="relative w-full h-auto ">
-            <div className="relative bg-white  rounded-lg shadow-2xl dark:bg-gray-700">
+            <div className="relative bg-white  rounded-lg shadow-2xl ">
               <button
                 onClick={() => {
                   setdeleteView(false);
                 }}
                 type="button"
-                className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center  "
                 data-modal-toggle="delete-modal"
               >
                 <svg
@@ -437,7 +434,7 @@ const Notice = () => {
               </button>
               <div className="p-6 text-center w-full flex justify-center items-center flex-col">
                 <GoStop className="w-8 h-8  my-5 text-center" />
-                <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                <h3 className="mb-5 text-lg font-normal text-gray-500 ">
                   Are you sure you want to delete this product?
                 </h3>
                 <div className="w-full flex justify-center items-center gap-8 ">
@@ -447,7 +444,7 @@ const Notice = () => {
                     }}
                     data-modal-toggle="delete-modal"
                     type="button"
-                    className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+                    className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300  font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
                   >
                     Yes, I'm sure
                   </button>
@@ -457,7 +454,7 @@ const Notice = () => {
                     }}
                     data-modal-toggle="delete-modal"
                     type="button"
-                    className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                    className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10      "
                   >
                     No, cancel
                   </button>
@@ -473,14 +470,14 @@ const Notice = () => {
           } `}
         >
           <div className="relative w-full h-auto ">
-            <div className="relative bg-white py-10 rounded-lg shadow-2xl dark:bg-gray-700 flex justify-center items-center flex-col">
+            <div className="relative bg-white py-10 rounded-lg shadow-2xl  flex justify-center items-center flex-col">
               <button
                 type="button"
                 onClick={() => {
                   setsuccessMessege("");
                   setsuccessModel(false);
                 }}
-                className="text-gray-400 absolute top-2.5 right-2.5 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                className="text-gray-400 absolute top-2.5 right-2.5 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center  "
                 data-modal-toggle="successModal"
               >
                 <svg
@@ -498,10 +495,10 @@ const Notice = () => {
                 </svg>
                 <span className="sr-only">Close modal</span>
               </button>
-              <div className="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 p-2 flex items-center justify-center mx-auto mb-3.5">
+              <div className="w-12 h-12 rounded-full bg-green-100  p-2 flex items-center justify-center mx-auto mb-3.5">
                 <svg
                   aria-hidden="true"
-                  className="w-8 h-8 text-green-500 dark:text-green-400"
+                  className="w-8 h-8 text-green-500 "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -513,7 +510,7 @@ const Notice = () => {
                   ></path>
                 </svg>
               </div>
-              <p className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+              <p className="mb-4 text-lg font-semibold text-gray-900 ">
                 {successMessege ? successMessege : "Done "}
               </p>
               <button
@@ -523,7 +520,7 @@ const Notice = () => {
                   setsuccessMessege("");
                   setsuccessModel(false);
                 }}
-                className="py-2 px-3 text-sm font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-900"
+                className="py-2 px-3 text-sm font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 "
               >
                 Done
               </button>

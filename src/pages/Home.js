@@ -78,12 +78,10 @@ const Home = () => {
                 <HiOutlineUserAdd className="w-12 h-12 text-white" />
               </div>
               <div>
-                <p class="text-2xl font-bold text-dark dark:text-white xl:text-[28px] xl:leading-[35px]">
+                <p class="text-2xl font-bold text-dark  xl:text-[28px] xl:leading-[35px]">
                   {NewUsers}
                 </p>
-                <p class="mt-1 text-base text-body-color dark:text-dark-6">
-                  New Users
-                </p>
+                <p class="mt-1 text-base text-body-color ">New Users</p>
               </div>
             </div>
           </div>
@@ -93,12 +91,10 @@ const Home = () => {
                 <FaUsersViewfinder className="w-12 h-12 text-white" />
               </div>
               <div>
-                <p class="text-2xl font-bold text-dark dark:text-white xl:text-[28px] xl:leading-[35px]">
+                <p class="text-2xl font-bold text-dark  xl:text-[28px] xl:leading-[35px]">
                   {Totalusers}
                 </p>
-                <p class="mt-1 text-base text-body-color dark:text-dark-6">
-                  Total Users
-                </p>
+                <p class="mt-1 text-base text-body-color ">Total Users</p>
               </div>
             </div>
           </div>
@@ -108,10 +104,10 @@ const Home = () => {
                 <RiMoneyEuroCircleLine className="w-12 h-12 text-white" />
               </div>
               <div>
-                <p class="text-2xl font-bold text-dark dark:text-white xl:text-[28px] xl:leading-[35px]">
+                <p class="text-2xl font-bold text-dark  xl:text-[28px] xl:leading-[35px]">
                   $4,350
                 </p>
-                <p class="mt-1 text-base text-body-color dark:text-dark-6">
+                <p class="mt-1 text-base text-body-color ">
                   Earned this month
                 </p>
               </div>

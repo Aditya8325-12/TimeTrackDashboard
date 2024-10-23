@@ -103,14 +103,14 @@ const User = () => {
         <div className="flex-1 flex items-center space-x-2 ">
           <h5>
             <span className="text-gray-500">All Users : </span>
-            <span className="dark:text-white">{UserData.length}</span>
+            <span className="">{UserData.length}</span>
           </h5>
-          <h5 className="text-gray-500 dark:text-gray-400 ml-1">
+          <h5 className="text-gray-500  ml-1">
             1 - {parseInt(UserData.length / 6) + 1}
           </h5>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-stretch md:items-center md:space-x-3 space-y-3 md:space-y-0 justify-between mx-4 py-4 border-t dark:border-gray-700">
+      <div className="flex flex-col md:flex-row items-stretch md:items-center md:space-x-3 space-y-3 md:space-y-0 justify-between mx-4 py-4 border-t ">
         <div className="w-full md:w-1/2">
           <form className="flex items-center">
             <label htmlFor="simple-search" className="sr-only">
@@ -120,7 +120,7 @@ const User = () => {
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <svg
                   aria-hidden="true"
-                  className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                  className="w-5 h-5 text-gray-500 "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +137,7 @@ const User = () => {
                 id="simple-search"
                 placeholder="Search for products"
                 required=""
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2     "
               />
             </div>
           </form>
@@ -147,7 +147,7 @@ const User = () => {
             type="button"
             id="createProductButton"
             data-modal-toggle="createProductModal"
-            className="flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+            className="flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2  focus:outline-none"
           >
             <svg
               className="h-3.5 w-3.5 mr-1.5 -ml-1"
@@ -167,7 +167,7 @@ const User = () => {
           <button
             id="filterDropdownButton"
             data-dropdown-toggle="filterDropdown"
-            className="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            className="w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200      "
             type="button"
           >
             <svg
@@ -202,8 +202,8 @@ const User = () => {
       </div>
 
       <div className="overflow-x-auto  ">
-        <table className="w-full text-sm text-left  text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <table className="w-full text-sm text-left  text-gray-500 ">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50  ">
             <tr>
               <th scope="col" className="p-4">
                 <div className="flex items-center">Sr.No</div>
@@ -235,33 +235,33 @@ const User = () => {
                 return (
                   <tr
                     key={items._id}
-                    className="border-b cursor-pointer dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-700"
+                    className="border-b cursor-pointer  hover:bg-gray-200 "
                   >
                     <td className="p-4 w-4">
                       <div className="flex items-center">{index + 1}</div>
                     </td>
                     <th
                       scope="row"
-                      className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap "
                     >
                       <div className="flex items-center mr-3">{items.name}</div>
                     </th>
                     <td className="px-4 py-3">
-                      <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                      <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded ">
                         {items.name}
                       </span>
                     </td>
-                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">
                       {items.email}
                     </td>
-                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">
                       {convertdateToNameDatetring(items.createDate)}
                     </td>
 
                     <td className="px-4 py-3">
                       {convertdateToNameDatetring(items.updatedDate)}
                     </td>
-                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">
                       <div className="flex items-center space-x-4">
                         <button
                           type="button"
@@ -273,7 +273,7 @@ const User = () => {
                           data-drawer-target="drawer-read-product-advanced"
                           data-drawer-show="drawer-read-product-advanced"
                           aria-controls="drawer-read-product-advanced"
-                          className="py-2 px-3 flex items-center text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                          className="py-2 px-3 flex items-center text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200      "
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -298,7 +298,7 @@ const User = () => {
                             setdeleteView(true);
                             setUserid(items._id);
                           }}
-                          className="flex items-center text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
+                          className="flex items-center text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center     "
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -336,7 +336,7 @@ const User = () => {
                 onClick={() => {
                   setcurrentpageIndex(currentpageIndex - 6);
                 }}
-                className="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                className="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700     "
                 aria-label="Previous" // For screen readers
               >
                 <svg
@@ -363,7 +363,7 @@ const User = () => {
                 onClick={() => {
                   setcurrentpageIndex(currentpageIndex + 6);
                 }}
-                className="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                className="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700     "
                 aria-label="Next" // For screen readers
               >
                 <p>Next</p>
@@ -399,13 +399,13 @@ const User = () => {
           } `}
         >
           <div class="relative w-full h-auto ">
-            <div class="relative bg-white  rounded-lg shadow-2xl dark:bg-gray-700">
+            <div class="relative bg-white  rounded-lg shadow-2xl ">
               <button
                 onClick={() => {
                   setdeleteView(false);
                 }}
                 type="button"
-                class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center  "
                 data-modal-toggle="delete-modal"
               >
                 <svg
@@ -425,7 +425,7 @@ const User = () => {
               </button>
               <div class="p-6 text-center w-full flex justify-center items-center flex-col">
                 <GoStop className="w-8 h-8  my-5 text-center" />
-                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                <h3 class="mb-5 text-lg font-normal text-gray-500 ">
                   Are you sure you want to delete this product?
                 </h3>
                 <div className="w-full flex justify-center items-center gap-8 ">
@@ -435,14 +435,14 @@ const User = () => {
                     }}
                     data-modal-toggle="delete-modal"
                     type="button"
-                    class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+                    class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300  font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
                   >
                     Yes, I'm sure
                   </button>
                   <button
                     data-modal-toggle="delete-modal"
                     type="button"
-                    class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                    class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10      "
                   >
                     No, cancel
                   </button>

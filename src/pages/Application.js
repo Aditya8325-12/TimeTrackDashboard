@@ -160,14 +160,14 @@ const Application = () => {
         <div className="flex-1 flex items-center space-x-2 ">
           <h5>
             <span className="text-gray-500">All Application : </span>
-            <span className="dark:text-white">{UserData.length}</span>
+            <span className=" ">{UserData.length}</span>
           </h5>
-          <h5 className="text-gray-500 dark:text-gray-400 ml-1">
+          <h5 className="text-gray-500   ml-1">
             1 - {parseInt(UserData.length / 6) + 1}
           </h5>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-stretch md:items-center md:space-x-3 space-y-3 md:space-y-0 justify-between mx-4 py-4 border-t dark:border-gray-700">
+      <div className="flex flex-col md:flex-row items-stretch md:items-center md:space-x-3 space-y-3 md:space-y-0 justify-between mx-4 py-4 border-t  ">
         <div className="w-full md:w-1/2">
           <form className="flex items-center">
             <label htmlFor="simple-search" className="sr-only">
@@ -177,7 +177,7 @@ const Application = () => {
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <svg
                   aria-hidden="true"
-                  className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                  className="w-5 h-5 text-gray-500  "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -194,7 +194,7 @@ const Application = () => {
                 id="simple-search"
                 placeholder="Search for products"
                 required=""
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2        "
               />
             </div>
           </form>
@@ -293,8 +293,8 @@ const Application = () => {
         </div>
       </div>
       <div className="overflow-x-auto  ">
-        <table className="w-full text-sm text-left  text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <table className="w-full text-sm text-left  text-gray-500  ">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50    ">
             <tr>
               <th scope="col" className="p-4">
                 <div className="flex items-center">Sr No</div>
@@ -326,7 +326,7 @@ const Application = () => {
                 return (
                   <tr
                     key={items._id}
-                    className="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className="border-b   hover:bg-gray-100  "
                   >
                     <td className="p-4 w-4">
                       <div className="flex items-center">{index + 1}</div>
@@ -336,21 +336,21 @@ const Application = () => {
                         {items.student_id}
                       </div>
                     </td>
-                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap  ">
                       <div className="flex items-center mr-3">
                         {items.leavecode}
                       </div>
                     </td>
                     <td className="px-4 py-3">
-                      <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                      <span className="bg-primary-100 text-primary-800 text-xs font-medium px-2 py-0.5 rounded ">
                         {convertdateToNameDatetring(items.applayDate)}
                       </span>
                     </td>
-                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap  ">
                       {items.reason}
                     </td>
                     <td
-                      className={`px-4 py-3 font-medium  whitespace-nowrap dark:text-white text-gray-900  ${
+                      className={`px-4 py-3 font-medium  whitespace-nowrap   text-gray-900  ${
                         items.sanctionedStatus === "Approve"
                           ? "text-green-500"
                           : "text-red-500"
@@ -358,11 +358,11 @@ const Application = () => {
                     >
                       {items.sanctionedStatus}
                     </td>
-                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap  ">
                       {convertdateToNameDatetring(items.LeaveDate)}
                     </td>
 
-                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap  ">
                       <div className="flex items-center space-x-4">
                         <button
                           type="button"
@@ -373,7 +373,7 @@ const Application = () => {
                           data-drawer-target="drawer-read-product-advanced"
                           data-drawer-show="drawer-read-product-advanced"
                           aria-controls="drawer-read-product-advanced"
-                          className="py-2 px-3 flex items-center  gap-2 text-sm font-medium text-center text-gray-900 focus:outline-none bg-blue-500 rounded-lg border border-blue-200 hover:bg-blue-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-blue-200 dark:focus:ring-gray-700 dark:bg-blue-800 dark:text-blue-400 dark:border-blue-600 dark:hover:text-white dark:hover:bg-blue-700"
+                          className="py-2 px-3 flex items-center  gap-2 text-sm font-medium text-center text-gray-900 focus:outline-none bg-blue-500 rounded-lg border border-blue-200 hover:bg-blue-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-blue-200 "
                         >
                           <TbHandClick />
                           Action
@@ -399,7 +399,7 @@ const Application = () => {
                 onClick={() => {
                   setcurrentpageIndex(currentpageIndex - 6);
                 }}
-                className="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                className="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700          "
                 aria-label="Previous" // For screen readers
               >
                 <svg
@@ -426,7 +426,7 @@ const Application = () => {
                 onClick={() => {
                   setcurrentpageIndex(currentpageIndex + 6);
                 }}
-                className="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                className="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700          "
                 aria-label="Next" // For screen readers
               >
                 <p>Next</p>
@@ -466,15 +466,15 @@ const Application = () => {
             <div class="relative w-full h-auto ">
               <div className="relative p-4 w-full  h-full md:h-auto">
                 {/* Modal content */}
-                <div className="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
+                <div className="relative p-4 bg-white rounded-lg shadow   sm:p-5">
                   {/* Modal header */}
-                  <div className="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  <div className="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5  ">
+                    <h3 className="text-lg font-semibold text-gray-900  ">
                       Update Application
                     </h3>
                     <button
                       type="button"
-                      className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center    "
                       data-modal-toggle="updateProductModal"
                       onClick={() => {
                         setactionModule(false);
@@ -504,7 +504,7 @@ const Application = () => {
                           ([key, value], index) => (
                             <h5
                               key={index}
-                              className="mb-1 text-sm font-medium text-gray-900 dark:text-white"
+                              className="mb-1 text-sm font-medium text-gray-900  "
                             >
                               {key} : {value}
                             </h5>
@@ -524,7 +524,7 @@ const Application = () => {
                         data-drawer-target="drawer-update-product"
                         data-drawer-show="drawer-update-product"
                         aria-controls="drawer-update-product"
-                        className="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                        className="py-2 px-3 flex items-center text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-primary-300      "
                       >
                         <FaCheck size={12} />
                         Approve
@@ -541,7 +541,7 @@ const Application = () => {
                         type="button"
                         data-modal-target="delete-modal"
                         data-modal-toggle="delete-modal"
-                        className="flex items-center text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
+                        className="flex items-center text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center      "
                       >
                         <TiCancel size={20} />
                         <h1>Reject</h1>
@@ -559,13 +559,13 @@ const Application = () => {
               } `}
             >
               <div class="relative w-full h-auto ">
-                <div class="relative bg-white  rounded-lg shadow-2xl dark:bg-gray-700">
+                <div class="relative bg-white  rounded-lg shadow-2xl  ">
                   <button
                     onClick={() => {
                       setdeleteView(false);
                     }}
                     type="button"
-                    class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                    class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center   "
                     data-modal-toggle="delete-modal"
                   >
                     <svg
@@ -585,7 +585,7 @@ const Application = () => {
                   </button>
                   <div class="p-6 text-center w-full flex justify-center items-center flex-col">
                     <GoStop className="w-8 h-8  my-5 text-center" />
-                    <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                    <h3 class="mb-5 text-lg font-normal text-gray-500  ">
                       Are you sure you want to Reject this Leave?
                     </h3>
                     <div className="w-full flex justify-center items-center gap-8 ">
@@ -595,7 +595,7 @@ const Application = () => {
                         }}
                         data-modal-toggle="delete-modal"
                         type="button"
-                        class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+                        class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300  font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
                       >
                         Yes, I'm sure
                       </button>
@@ -605,7 +605,7 @@ const Application = () => {
                         }}
                         data-modal-toggle="delete-modal"
                         type="button"
-                        class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                        class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10         "
                       >
                         No, cancel
                       </button>
@@ -621,13 +621,13 @@ const Application = () => {
               } `}
             >
               <div class="relative w-full h-auto ">
-                <div class="relative bg-white  rounded-lg shadow-2xl dark:bg-gray-700">
+                <div class="relative bg-white  rounded-lg shadow-2xl  ">
                   <button
                     onClick={() => {
                       setAproveModule(false);
                     }}
                     type="button"
-                    class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                    class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center   "
                     data-modal-toggle="delete-modal"
                   >
                     <svg
@@ -647,7 +647,7 @@ const Application = () => {
                   </button>
                   <div class="p-6 text-center w-full flex justify-center items-center flex-col">
                     <GoStop className="w-8 h-8  my-5 text-center" />
-                    <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+                    <h3 class="mb-5 text-lg font-normal text-gray-500  ">
                       Are you sure you want to Aprove this Leave?
                     </h3>
                     <div className="w-full flex justify-center items-center gap-8 ">
@@ -657,7 +657,7 @@ const Application = () => {
                         }}
                         data-modal-toggle="delete-modal"
                         type="button"
-                        class="text-white bg-green-600 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+                        class="text-white bg-green-600 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300  font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
                       >
                         Yes, I'm sure
                       </button>
@@ -667,7 +667,7 @@ const Application = () => {
                         }}
                         data-modal-toggle="delete-modal"
                         type="button"
-                        class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+                        class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10         "
                       >
                         No, cancel
                       </button>
@@ -686,14 +686,14 @@ const Application = () => {
           } `}
         >
           <div class="relative w-full h-auto ">
-            <div class="relative bg-white py-10 rounded-lg shadow-2xl dark:bg-gray-700 flex justify-center items-center flex-col">
+            <div class="relative bg-white py-10 rounded-lg shadow-2xl   flex justify-center items-center flex-col">
               <button
                 type="button"
                 onClick={() => {
                   setsuccessMessege("");
                   setsuccessModel(false);
                 }}
-                class="text-gray-400 absolute top-2.5 right-2.5 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                class="text-gray-400 absolute top-2.5 right-2.5 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center    "
                 data-modal-toggle="successModal"
               >
                 <svg
@@ -711,10 +711,10 @@ const Application = () => {
                 </svg>
                 <span class="sr-only">Close modal</span>
               </button>
-              <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 p-2 flex items-center justify-center mx-auto mb-3.5">
+              <div class="w-12 h-12 rounded-full bg-green-100  p-2 flex items-center justify-center mx-auto mb-3.5">
                 <svg
                   aria-hidden="true"
-                  class="w-8 h-8 text-green-500 dark:text-green-400"
+                  class="w-8 h-8 text-green-500 "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -726,7 +726,7 @@ const Application = () => {
                   ></path>
                 </svg>
               </div>
-              <p class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+              <p class="mb-4 text-lg font-semibold text-gray-900  ">
                 {successMessege ? successMessege : "Done "}
               </p>
               <button
@@ -736,7 +736,7 @@ const Application = () => {
                   setsuccessMessege("");
                   setsuccessModel(false);
                 }}
-                class="py-2 px-3 text-sm font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-900"
+                class="py-2 px-3 text-sm font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 "
               >
                 Continue
               </button>

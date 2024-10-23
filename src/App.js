@@ -11,35 +11,48 @@ import Notification from "./pages/Notification";
 import Message from "./pages/Message";
 import Userdetails from "./pages/Userdetails";
 
-
 import { Route, Routes, useLocation } from "react-router-dom";
 const App = () => {
   const location = useLocation();
 
   return (
-    <div className="w-full  flex flex-col     ">
-      {location.pathname !== "/login" && location.pathname !== "signup" && (
-        <Header />
-      )}
-
-      <div className="w-full mt-20 h-full flex fixed ">
+    <div>
+      <main class="grid min-h-full h-screen place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8  lg:hidden ">
+        <div class="text-center">
+          <p class="text-base font-semibold text-indigo-600">404</p>
+          <p class="mt-6 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
+            This site is only accessible on desktop devices.
+          </p>
+          <p class="mt-6 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
+            This site is only available on desktop devices. Please switch to a
+            desktop to view the content.
+          </p>
+        </div>
+      </main>
+      <div className="w-full  lg:flex flex-col  hidden    ">
         {location.pathname !== "/login" && location.pathname !== "signup" && (
-          <div className="w-64   h-full   shadow-xl px-5 ">
-            <Sidebar />
-          </div>
+          <Header />
         )}
 
-        <Routes>
-          <Route path="/" Component={Home} />
-          <Route path="/login" Component={Login} />
-          <Route path="/user" Component={User} />
-          <Route path="/application" Component={Application} />
-          <Route path="/notice" Component={Notice} />
-          <Route path="/holiday" Component={Holiday} />
-          <Route path="/notification" Component={Notification} />
-          <Route path="/message" Component={Message} />
-          <Route path="/user/userdetails" Component={Userdetails} />
-        </Routes>
+        <div className="w-full mt-20 h-full flex fixed ">
+          {location.pathname !== "/login" && location.pathname !== "signup" && (
+            <div className="w-64   h-full   shadow-xl px-5 ">
+              <Sidebar />
+            </div>
+          )}
+
+          <Routes>
+            <Route path="/" Component={Home} />
+            <Route path="/login" Component={Login} />
+            <Route path="/user" Component={User} />
+            <Route path="/application" Component={Application} />
+            <Route path="/notice" Component={Notice} />
+            <Route path="/holiday" Component={Holiday} />
+            <Route path="/notification" Component={Notification} />
+            <Route path="/message" Component={Message} />
+            <Route path="/user/userdetails" Component={Userdetails} />
+          </Routes>
+        </div>
       </div>
     </div>
   );

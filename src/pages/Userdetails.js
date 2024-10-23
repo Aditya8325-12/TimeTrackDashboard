@@ -112,17 +112,15 @@ const Userdetails = () => {
               </div>
               <div className="w-8/12 flex  px-4">
                 <div className="w-full">
-                  <dl className="text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
+                  <dl className="text-gray-900 divide-y divide-gray-200  ">
                     <div className="flex gap-4 pb-3">
-                      <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
-                        Name :
-                      </dt>
+                      <dt className="mb-1 text-gray-500 md:text-lg ">Name :</dt>
                       <dd className="text-lg font-semibold">
                         {UserData[0].name || "N/A"}
                       </dd>
                     </div>
                     <div className="flex gap-4 pt-3">
-                      <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
+                      <dt className="mb-1 text-gray-500 md:text-lg ">
                         Phone Number :
                       </dt>
                       <dd className="text-lg font-semibold">
@@ -130,7 +128,7 @@ const Userdetails = () => {
                       </dd>
                     </div>
                     <div className="flex gap-4 pt-3">
-                      <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
+                      <dt className="mb-1 text-gray-500 md:text-lg ">
                         Email :
                       </dt>
                       <dd className="text-lg font-semibold">
@@ -138,7 +136,7 @@ const Userdetails = () => {
                       </dd>
                     </div>
                     <div className="flex gap-4 pt-3">
-                      <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
+                      <dt className="mb-1 text-gray-500 md:text-lg ">
                         Create Date :
                       </dt>
                       <dd className="text-lg font-semibold">
@@ -148,7 +146,7 @@ const Userdetails = () => {
                       </dd>
                     </div>
                     <div className="flex gap-4 pt-3">
-                      <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
+                      <dt className="mb-1 text-gray-500 md:text-lg ">
                         Update Date :
                       </dt>
                       <dd className="text-lg font-semibold">
