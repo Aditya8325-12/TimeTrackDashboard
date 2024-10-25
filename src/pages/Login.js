@@ -64,7 +64,7 @@ const Login = () => {
     <div className="w-full h-full flex items-center flex-col  relative">
       <div className=" w-4/12  p-6 space-y-8 sm:p-8 bg-white mt-4  rounded-lg shadow-xl ">
         <h2 className="text-2xl font-bold text-gray-900 ">
-          Sign in to Flowbite
+          Sign in to TimeTrack
         </h2>
         <form className="mt-8 space-y-6" ref={formdata} onSubmit={LoginUser}>
           <div>
@@ -98,26 +98,6 @@ const Login = () => {
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5      "
               required
             />
-          </div>
-          <div className="flex items-start">
-            <div className="flex items-center h-5">
-              <input
-                id="remember"
-                aria-describedby="remember"
-                name="remember"
-                type="checkbox"
-                className="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300    "
-                required
-              />
-            </div>
-            <div className="ms-3 text-sm">
-              <label
-                // For="remember"
-                className="font-medium text-gray-500 "
-              >
-                Remember this device
-              </label>
-            </div>
           </div>
           <button
             type="submit"

@@ -16,7 +16,7 @@ const Header = () => {
     <nav className="bg-white shadow-2xl w-full h-20 fixed z-20   flex justify-center items-center ">
       <div className="w-11/12 flex flex-wrap items-center justify-between ">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="/images/logo.png" className="h-10" alt="Flowbite Logo" />
+          <img src="/images/logo.png" className="h-10" alt=" Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap ">
             Time Track
           </span>
